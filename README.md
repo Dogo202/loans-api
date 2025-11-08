@@ -1,20 +1,20 @@
-#Loans API (Yii2 + Nginx + PostgreSQL + Docker)
+# Loans API (Yii2 + Nginx + PostgreSQL + Docker)
 
-####API для подачи и обработки заявок на займ.
+#### API для подачи и обработки заявок на займ.
 
-###Требования ТЗ
+### Требования ТЗ
 
 Сервер: http://localhost:80
 
 БД: host=localhost, port=5432, dbname=loans, user=user, password=password
 
-####Эндпоинты:
+#### Эндпоинты:
 
 POST /requests — создать заявку
 
 GET /processor?delay=5 — обработать заявки (аппрув 10%, с задержкой sleep(delay))
 
-####Стек
+#### Стек
 
 PHP 8.3-fpm (Alpine), Yii2 basic
 
@@ -24,7 +24,7 @@ PostgreSQL 15 (Alpine)
 
 Docker Compose, host network (порты 80/5432 на хосте должны быть свободны)
 
-####Быстрый старт
+#### Быстрый старт
 ```bash
 # клонируйте репозиторий
 git clone <repo> loans-api && cd loans-api
@@ -44,7 +44,7 @@ docker compose exec php php yii migrate/up --interactive=0
 
 ```
 
-###Проверка:
+### Проверка:
 ```bash
 # создать заявку
 curl -i -X POST http://localhost/requests \

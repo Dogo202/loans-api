@@ -54,3 +54,6 @@ curl -i -X POST http://localhost/requests \
 # запустить обработчик с задержкой 5 сек. на заявку
 curl -i "http://localhost/processor?delay=5"
 ```
+
+
+### Затраченно время на разработу - ~3 часа
